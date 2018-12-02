@@ -1,1 +1,13 @@
 language: java
+before_deploy:
+- mvn help:evaluate -N -Dexpression=project.version|grep -v '\['
+- export project_version=$(mvn help:evaluate -N -Dexpression=project.version|grep
+  -v '\[')
+deploy:
+  provider: releases
+  api_key:
+    secure: YDWgMal/LGkfggxf68frAJzQlsCegLkbUQ6oJ6WkmcHx2Y8ve/DzqYKtlwz4qizohrivWwrnbCvE1WQrm+6sF4S8P4GvYhm9imzarSHzv8QKpfNW6dqF/sZNJNnWcHe+xrpxLVsklmTgOgyjom/lIbD0OkxCY9SL9jvykv4nGnCq4OT5Vwn/HTrsqX3d5wl+RAJSoIvyYvjimmku+l/YFuNPvK/+gwQlFg30qyr7FAScw/7ZIznTTAVcpigv2T2mnNEpvQbWkBM9xRHElravgtAKJpL8Ol+Q7JfDmKC7HgOL12JZSeqr+Ptr+QgUwaILBSzRY/MOwnlF3fpIngfFPrNxnHZ8uuOl5Ne+DT37vwBTgl0SGJMKPRhp7NIE0LX72rzFtOGq39U206g5nxy1yQWOFkFuJo76KpD6TZKtdTF0qPogK5f7rUt1ZF7Xwlz/dBxhqm7sRcZeHo8yNAqFaCqRqlCm+6qAg4qGynsjccYzejsGejEJJDHu1PFYwRKidfeitJa0JDIlq8+88gRdq8hJ+5t+cyUrgFCI4L4tK5yoSzDqMY12LF1a1YOdNNkLss6xJEOx0bYmzYQMY0mrhLvHgdqRcJ8cUYffCaUfhD+Byx9ly1X0oK4V7TkJXGslBWogkLlCaD/zCZ40rvt4o57RXGphjQfQRChBkqE2wvU=
+  file: target/nestedAvro-maven-plugin-$project_version.jar
+  on:
+    repo: otahri/nestedAvro-maven-plugin
+  name: $project_version
