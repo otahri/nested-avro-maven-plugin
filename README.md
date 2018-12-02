@@ -1,6 +1,7 @@
 # nestedAvro-maven-plugin
 
 [![Build Status](https://travis-ci.org/otahri/nestedAvro-maven-plugin.svg?branch=master)](https://travis-ci.org/otahri/nestedAvro-maven-plugin)
+[![License](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://raw.githubusercontent.com/otahri/nestedAvro-maven-plugin/master/LICENSE)
 
 A maven plugin for creating complete Avro schema from multiple nested schema files.
 
