@@ -39,7 +39,7 @@ public class NestedSchemasTest {
 
     @Test
     void testNullSchemaShouldThrowException() throws IOException, MojoExecutionException {
-        File inputDirectory = new File("src/test/resources/inputSchemas");
+        File inputDirectory = new File(this.getClass().getResource("/InputSchemas").getFile());
         nestedSchemas.load(inputDirectory.getAbsolutePath());
         nestedSchemas.compile();
         Throwable exception = assertThrows(NullPointerException.class, () ->
