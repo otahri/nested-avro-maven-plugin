@@ -5,7 +5,8 @@ before_deploy:
   -v '\[')
 deploy:
   provider: releases
-  api_key: c7fcd808678fbe1eadb59d2de560c0589f8c1f46
+  api_key:
+    secure: iAh0kH/eAqycWdTCWwVWHsAGFeLhcOVaVf08ldJFISziJa7p4mMU+n0mgh5ndmi953O5Qqtgokguw9qCvPJKLaoB8Gn/XSH9gwbSVYVwi3mvlzypUKHeb+zK2GTzXojAGezgUoVpDvf/hZTKrJX7d8CKvqbTw7perMSQyVCbA1IHQ4v5Fe3XEWcx97CLVRj3q19OhPKsXlGcV7smEnEDwXueu2aCylqKnwVMyABdxhq74U2VXlS8LyIDvVefClL0YeXd/HwxWTZMOV3+Ok/W2Qr6VS8YgSGfEffp8GpLsRcyKqLJo3e5Bsk4f76ycXGMqXhWgxde9J2DGpc5nCDgKtL6biKCYWLWpoWqYKI3fOZxQgkod6996cbIRDdkKfKOuFQUBqp6UxGF1u+ullTxL7QC8z6IZeKcafcQfeATNHbCKlydUaPZCTRwz/wqFVr2gql1a79tLuTOFTi4kA7wz4KAHwI4mdre4ajT/RomFoYTvEgZo0lup8a+DQa6Liv8XPTvM+DF+Bq/qFuZnLfasQmQSsQ3tYsiT33r6nELBD4MGDTLBIsonDVF5HVn2UjBNCOXpVd4kKgElEyvFwQfnW6KSQb1C1z9wgpNawPHJNtqc89WM1XKBR0IAcFPz2vvkGFb5rhpJuT9XrUPprpIE3TUkr99lK8xM6/3ufQXMgY=
   file: target/nestedAvro-maven-plugin-$project_version.jar
   skip_cleanup: true
   on:
