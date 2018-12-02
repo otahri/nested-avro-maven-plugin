@@ -17,6 +17,7 @@
         <plugin.maven.version>3.6.0</plugin.maven.version>
         <java.version>8</java.version>
         <google.guava.version>27.0-jre</google.guava.version>
+        <surfire.plugin.version>2.22.1</surfire.plugin.version>
     </properties>
 
     <licenses>
@@ -74,6 +75,12 @@
             <version>${junit5.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit5.version}</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -90,6 +97,11 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-plugin-plugin</artifactId>
                 <version>${plugin.maven.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${surfire.plugin.version}</version>
             </plugin>
         </plugins>
     </build>
