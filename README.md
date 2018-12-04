@@ -23,10 +23,10 @@ A maven plugin for creating complete Avro schema from multiple nested schema fil
             <artifactId>nestedAvro-maven-plugin</artifactId>
             <version>1.0-SNAPSHOT</version>
             <configuration>
-                <inputDirectory></inputDir>
-                <outputDirectory></outputDir>
+                <inputDirectory></inputDirectory>
+                <outputDirectory></outputDirectory>
                 <schemaName></schemaName>
-                <outputFileName></fileName>
+                <outputFileName></outputFileName>
             </configuration>
         </plugin>
     </plugins>
