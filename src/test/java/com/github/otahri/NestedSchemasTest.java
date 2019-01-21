@@ -1,4 +1,4 @@
-package org.avro;
+package com.github.otahri;
 
 import org.apache.maven.plugin.MojoExecutionException;
 import org.junit.Rule;
@@ -10,8 +10,8 @@ import org.junit.rules.TemporaryFolder;
 import java.io.File;
 import java.io.IOException;
 
-import static org.avro.NestedSchemas.DIRECTORY_IS_EMPTY;
-import static org.avro.NestedSchemas.SCHEMA_NAME_CAN_T_BE_NULL;
+import static com.github.otahri.NestedSchemas.DIRECTORY_IS_EMPTY;
+import static com.github.otahri.NestedSchemas.SCHEMA_NAME_CAN_T_BE_NULL;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 

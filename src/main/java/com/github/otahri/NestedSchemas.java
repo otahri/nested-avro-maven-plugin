@@ -1,4 +1,4 @@
-package org.avro;
+package com.github.otahri;
 
 import org.apache.avro.Schema;
 import org.apache.commons.io.FileUtils;
