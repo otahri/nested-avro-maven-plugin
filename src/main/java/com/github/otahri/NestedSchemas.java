@@ -23,7 +23,7 @@ class NestedSchemas {
     private static final String SCHEMA_FILE_EXTENSION = ".avsc";
     private static final String UTF_8 = "UTF-8";
     static final String DIRECTORY_IS_EMPTY = "Directory is empty";
-    static final String ILLEGAL_SCHEMA = "Illegal Schema";
+    private static final String ILLEGAL_SCHEMA = "Illegal Schema";
     private Queue<String> waitingQueue = new LinkedList<>();
     private Map<String, Schema> schemas = new HashMap<>();
     private static NestedSchemas nestedSchemas = new NestedSchemas();
@@ -51,7 +51,7 @@ class NestedSchemas {
     }
 
     void compile() {
-        while (waitingQueue.size() != 0) {
+        while (waitingQueue.isEmpty()) {
             String item = waitingQueue.poll();
             try {
                 String completeSchema = compileSchema(item);
@@ -66,7 +66,7 @@ class NestedSchemas {
 
     void save(String outputDirectory, String schemaName, String fileName) throws IOException, MojoExecutionException {
         checkNotNull(schemaName, SCHEMA_NAME_CAN_T_BE_NULL);
-        if (schemas.size() != 0) {
+        if (schemas.isEmpty()) {
             try (FileWriter file = new FileWriter(outputDirectory + "/" + fileName)) {
                 file.write(schemas.get(schemaName).toString(true));
             }

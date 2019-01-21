@@ -11,4 +11,5 @@ deploy:
   skip_cleanup: true
   on:
     repo: otahri/nestedAvro-maven-plugin
+    branch: release
   name: $project_version
