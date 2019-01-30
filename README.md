@@ -19,9 +19,9 @@ A maven plugin for creating complete Avro schema from multiple nested schema fil
 <build>
     <plugins>
         <plugin>
-            <groupId>org.avro</groupId>
+            <groupId>com.github.otahri</groupId>
             <artifactId>nestedAvro-maven-plugin</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0</version>
             <configuration>
                 <inputDirectory></inputDirectory>
                 <outputDirectory></outputDirectory>
