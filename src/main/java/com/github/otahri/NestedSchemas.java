@@ -51,7 +51,7 @@ class NestedSchemas {
     }
 
     void compile() {
-        while (waitingQueue.isEmpty()) {
+        while (!waitingQueue.isEmpty()) {
             String item = waitingQueue.poll();
             try {
                 String completeSchema = compileSchema(item);
@@ -66,7 +66,7 @@ class NestedSchemas {
 
     void save(String outputDirectory, String schemaName, String fileName) throws IOException, MojoExecutionException {
         checkNotNull(schemaName, SCHEMA_NAME_CAN_T_BE_NULL);
-        if (schemas.isEmpty()) {
+        if (!schemas.isEmpty()) {
             try (FileWriter file = new FileWriter(outputDirectory + "/" + fileName)) {
                 file.write(schemas.get(schemaName).toString(true));
             }
